@@ -58,7 +58,7 @@ const works = [
     description: 'ポートフォリオサイト',
     detail: 'このポートフォリオサイトは Vue 3・ScrollReveal・TypeIt を活用し、アニメーションやスムーズなUXを重視して制作しました。',
     image: '/assets/portfolio_site.png',
-    url: 'https://portfolio.example.com'
+    url: 'https://ryusei-portfolio.netlify.app/'
   },
 
 ]

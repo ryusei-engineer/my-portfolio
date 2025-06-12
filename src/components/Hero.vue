@@ -69,6 +69,10 @@ const scrollToAbout = () => {
   .hero-content h1 {
   font-size: 4rem;
   }
+
+  .scroll-indicator {
+  bottom: 4rem;
+}
 }
 
 @keyframes fadeInUp {
@@ -83,7 +87,7 @@ const scrollToAbout = () => {
 }
 .scroll-indicator {
   position: absolute;
-  bottom: 4rem;
+  bottom: 7rem;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
