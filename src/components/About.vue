@@ -1,9 +1,9 @@
 <template>
   <section class="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
+      <h2 class="section-title" data-sr>About Me</h2>
       <p class="about-text">
-        はじめまして、りゅうせいです。自社開発企業でエンジニアやってます。個人開発では自分が「こういうの欲しい」と思ったものを自由に作ってます。
+        はじめまして、りゅうせいです。自社開発企業でエンジニアやってます。個人開発では自分が「こういうの欲しい」と思ったものを自由に作ってます。最近はVue.jsとSupabaseをよく使ってます。
       </p>
     </div>
   </section>
@@ -18,7 +18,6 @@
 .about-text {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #cbd5e1;
   margin: 0 auto;
 }
 
@@ -31,4 +30,29 @@
     font-size: 1.25rem;
   }
 }
+
+.section-title {
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+/* 下線アニメーション */
+.section-title::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--color-accent, #3b82f6);
+  margin-top: 0.4rem;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.section-title.revealed::after {
+  transform: scaleX(1);
+}
+
 </style>

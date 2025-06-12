@@ -1,7 +1,7 @@
 <template>
   <section class="works">
     <div class="container">
-      <h2 class="section-title">Works</h2>
+      <h2 class="section-title" data-sr>Works</h2>
       <div class="works-grid">
         <div class="work-card" v-for="(work, index) in works" :key="index">
           <img :src="work.image" :alt="work.title" />
@@ -111,4 +111,30 @@ const works = [
   color: #cbd5e1;
 }
 
+
+
+
+.section-title {
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+/* 下線アニメーション */
+.section-title::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--color-accent, #3b82f6);
+  margin-top: 0.4rem;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.section-title.revealed::after {
+  transform: scaleX(1);
+}
 </style>

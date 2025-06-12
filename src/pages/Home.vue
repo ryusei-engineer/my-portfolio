@@ -80,6 +80,17 @@ onMounted(() => {
     opacity: 0,
     scale: 0.95
   })
+
+  ScrollReveal().reveal('.section-title', {
+  distance: '20px',
+  duration: 600,
+  easing: 'ease-out',
+  origin: 'bottom',
+  afterReveal: el => {
+    el.classList.add('revealed');
+  }
+});
+
 })
 </script>
 

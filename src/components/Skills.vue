@@ -1,7 +1,7 @@
 <template>
   <section class="skills">
     <div class="container">
-      <h2 class="section-title">Skills</h2>
+      <h2 class="section-title" data-sr>Skills</h2>
       <ul class="skills-list">
         <li><strong>Languages:</strong> HTML, CSS, JavaScript, PHP</li>
         <li><strong>Frameworks:</strong> Vue.js, Lalavel</li>
@@ -45,4 +45,29 @@
     font-size: 1.25rem;
   }
 }
+
+.section-title {
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+/* 下線アニメーション */
+.section-title::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--color-accent, #3b82f6);
+  margin-top: 0.4rem;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.section-title.revealed::after {
+  transform: scaleX(1);
+}
+
 </style>
