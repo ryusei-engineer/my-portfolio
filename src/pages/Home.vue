@@ -35,6 +35,7 @@
 </template>
 
 <script setup>
+
 import { onMounted, ref } from 'vue'
 import TypeIt from 'typeit'
 import ScrollReveal from 'scrollreveal'
@@ -96,7 +97,7 @@ onMounted(() => {
 
 <style scoped>
 .hero-page {
-  font-family: 'Poppins', sans-serif;
+  font-family: sans-serif;
   color: #ffffff;
   scroll-behavior: smooth;
 }
