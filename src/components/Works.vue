@@ -12,7 +12,10 @@
             <p>{{ work.description }}</p>
             <transition name="accordion">
               <div v-if="openIndex === index" class="accordion-detail">
-                <a :href="work.url" class="work-link" target="_blank" rel="noopener">▶ URLはこちら</a>
+                <a v-if="work.url" :href="work.url" class="work-link" target="_blank" rel="noopener">▶ URLはこちら</a>
+                <span v-else class="work-link closed-info">
+                  ※本サービスは現在ご利用いただけません
+                </span>
                 <p>{{ work.detail }}</p>
               </div>
             </transition>
@@ -41,16 +44,22 @@ const works = [
     description: '学習計画をスマートに管理',
     detail: '学習タスクの登録・進捗管理・カレンダー表示・記録機能を備えた自己学習支援ツールです。Vue 3 と Supabase を用いて開発し、シンプルかつ直感的なUIにこだわりました。',
     image: 'src/assets/yaru_log.png',
-    url: 'https://yarulog.example.com'
+    url: 'https://yarulog.netlify.app'
+  },
+  {
+    title: 'Racipe',
+    description: 'レシピ共有サイト',
+    detail: 'Laravelを用いて開発した、ユーザーがレシピを投稿・共有できるWebアプリです。カテゴリー検索やお気に入り機能があります。レシピは閲覧ユーザーが５段階でラクさを評価するため、客観的なラクさでレシピが評価されます。',
+    image: 'src/assets/racipe.png',
+    url: ''
   },
   {
     title: 'Portfolio Site',
-    description: '自身の実績をまとめたサイト',
+    description: 'ポートフォリオサイト',
     detail: 'このポートフォリオサイトは Vue 3・ScrollReveal・TypeIt を活用し、アニメーションやスムーズなUXを重視して制作しました。',
     image: 'src/assets/portfolio_site.png',
     url: 'https://portfolio.example.com'
-  }
-
+  },
 
 ]
 </script>
@@ -202,6 +211,10 @@ const works = [
 }
 .work-link:hover {
   color: var(--color-accent-hover, #60a5fa);
+}
+.closed-info {
+  color: #94a3b8;
+  font-size: 0.9rem;
 }
 
 </style>
