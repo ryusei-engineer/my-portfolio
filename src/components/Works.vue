@@ -43,21 +43,21 @@ const works = [
     title: 'YaruLog',
     description: '学習計画をスマートに管理',
     detail: '学習タスクの登録・進捗管理・カレンダー表示・記録機能を備えた自己学習支援ツールです。Vue 3 と Supabase を用いて開発し、シンプルかつ直感的なUIにこだわりました。',
-    image: 'src/assets/yaru_log.png',
+    image: '/assets/yaru_log.png',
     url: 'https://yarulog.netlify.app'
   },
   {
     title: 'Racipe',
     description: 'レシピ共有サイト',
     detail: 'Laravelを用いて開発した、ユーザーがレシピを投稿・共有できるWebアプリです。カテゴリー検索やお気に入り機能があります。レシピは閲覧ユーザーが５段階でラクさを評価するため、客観的なラクさでレシピが評価されます。',
-    image: 'src/assets/racipe.png',
+    image: '/assets/racipe.png',
     url: ''
   },
   {
     title: 'Portfolio Site',
     description: 'ポートフォリオサイト',
     detail: 'このポートフォリオサイトは Vue 3・ScrollReveal・TypeIt を活用し、アニメーションやスムーズなUXを重視して制作しました。',
-    image: 'src/assets/portfolio_site.png',
+    image: '/assets/portfolio_site.png',
     url: 'https://portfolio.example.com'
   },
 

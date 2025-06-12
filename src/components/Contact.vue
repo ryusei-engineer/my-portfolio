@@ -17,7 +17,8 @@
 </template>
 
 <script setup>
-import IconSvg from '../assets/icon.svg'
+import IconSvg from '/assets/icon.svg'
+
 </script>
 
 
