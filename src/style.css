@@ -20,11 +20,11 @@ h1, h2, h3 {
 section {
   max-width: 720px;
   margin: 0 auto;
-  padding: 0 1rem 2.5rem;
+  padding: 0 1rem;
 }
 
 section + section {
-  padding: 2.5rem 1rem;
+  padding: 4rem 1rem;
 }
 
 a {

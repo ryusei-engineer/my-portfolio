@@ -10,7 +10,6 @@
   </header>
   
   <div class="hero-page">
-
     <section>
       <Hero @ready="initTypeIt" />
     </section>
@@ -30,8 +29,11 @@
     <section class="contact">
       <Contact />
     </section>
-
   </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Ryusei. All rights reserved.</p>
+  </footer>
 </template>
 
 <script setup>
@@ -152,19 +154,28 @@ onMounted(() => {
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translate(0, 10px);
+      opacity: 0;
+      transform: translate(0, 10px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
   }
-  to {
-    opacity: 1;
-    transform: translate(0, 0);
+
+  @media (min-width: 768px) {
+    .navbar {
+    width: calc(100% - (4rem * 2));
+    padding: 1rem 4rem;
   }
 }
 
-@media (min-width: 768px) {
-  .navbar {
-  width: calc(100% - (4rem * 2));
-  padding: 1rem 4rem;
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  background-color: transparent; /* または黒背景に合わせて調整 */
 }
-}
+
 </style>

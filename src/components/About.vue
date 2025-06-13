@@ -1,7 +1,7 @@
 <template>
   <section class="about">
     <div class="container">
-      <h2 class="section-title" data-sr>About Me</h2>
+      <h2 class="section-title" data-sr>About</h2>
       <p class="about-text">
         はじめまして、りゅうせいです。自社開発企業でエンジニアやってます。個人開発では自分が「こういうの欲しい」と思ったものを自由に作ってます。最近はVue.jsとSupabaseをよく使ってます。
       </p>
